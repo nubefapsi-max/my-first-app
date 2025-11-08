@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const user = {nombre  : 'Luis', rol:'desarrollador'};
 
   return (
     <>
@@ -29,6 +30,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+     
+      <h1>{user.nombre} es un {user.rol};</h1>
     </>
   )
 }
