@@ -6,6 +6,9 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0);
   const user = {nombre  : 'Luis', rol:'desarrollador'};
+  const[mensaje, setMensaje] = useState("Mensaje inicial");
+  const nombres = ["luis", "sonia","oscar","tita"];
+  
 
   return (
     <>
@@ -22,7 +25,8 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </button><br />
+        <button onClick={() => setMensaje("El mensaje ha cambiado")}>{mensaje}</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -32,6 +36,10 @@ function App() {
       </p>
      
       <h1>{user.nombre} es un {user.rol};</h1>
+      <h2>Nombres</h2>
+      <ul>
+        {nombres.map(nombre =>(<li>{nombre}</li>))}
+      </ul>
     </>
   )
 }
