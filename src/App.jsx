@@ -26,7 +26,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button><br />
-        <button onClick={() => setMensaje("El mensaje ha cambiado")}>{mensaje}</button>
+        <button onClick={() => setMensaje("El mensaje ha cambiado el viernes")}>{mensaje}</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
